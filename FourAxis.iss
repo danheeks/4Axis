@@ -26,11 +26,13 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Dev\4Axis\AutoProgram.bat"; DestDir: "{app}\AutoProgram"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\AutoProgram.py"; DestDir: "{app}\AutoProgram"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\AutoProgramDlg.py"; DestDir: "{app}\AutoProgram"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\AutoProgram.py"; DestDir: "{app}\AutoProgram"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\test.py"; DestDir: "{app}\AutoProgram"; Flags: ignoreversion
+Source: "C:\Dev\4Axis\Run.bat"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Dev\4Axis\FourAxis.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Dev\4Axis\FourAxisApp.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Dev\4Axis\FourAxisDlg.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Dev\4Axis\Run.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Dev\4Axis\Splash.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Dev\4Axis\Splash.png"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
 
 Source: "C:\Dev\dsim\sim.pyd"; DestDir: "{app}\dsim"; Flags: ignoreversion
 Source: "C:\Dev\dsim\SimApp.py"; DestDir: "{app}\dsim"; Flags: ignoreversion
@@ -70,15 +72,15 @@ Source: "C:\Users\Admin\Downloads\Heeks2Dist\python3\*.pyd"; DestDir: "{app}\pyt
 
 ;Source: "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\redist\x86\Microsoft.VC120.MFC\*"; DestDir: "{app}"; Flags: ignoreversion
 ;Source: "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\redist\x86\Microsoft.VC120.OPENMP\*"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\redist\x86\Microsoft.VC120.CRT\*"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Windows\SysWOW64\mfc140u.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Windows\SysWOW64\msvcp140.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Windows\SysWOW64\vcruntime140.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Windows\SysWOW64\vcomp140.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\redist\x86\Microsoft.VC120.CRT\*"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Windows\SysWOW64\mfc140u.dll"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Windows\SysWOW64\msvcp140.dll"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Windows\SysWOW64\vcruntime140.dll"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
+Source: "C:\Windows\SysWOW64\vcomp140.dll"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversi on" on any shared system files
 
 [Icons]
-Name: "{group}\Four Axis Heeks"; Filename: "{app}\FourAxis\FourAxis.bat"; WorkingDir: "{app}\FourAxis";
-Name: "{commondesktop}\Four Axis Heeks"; Filename: "{app}\FourAxis\FourAxis.bat"; WorkingDir: "{app}\FourAxis"; Tasks: desktopicon
+Name: "{group}\Four Axis Heeks"; Filename: "{app}\FourAxis\Run.bat"; WorkingDir: "{app}\FourAxis";
+Name: "{commondesktop}\Four Axis Heeks"; Filename: "{app}\FourAxis\Run.bat"; WorkingDir: "{app}\FourAxis"; Tasks: desktopicon
 
