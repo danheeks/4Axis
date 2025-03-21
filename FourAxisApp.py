@@ -14,6 +14,7 @@ import step
 import geom
 import cad
 import time
+import math
     
 class HeeksExpertApp(SimApp):
     def __init__(self):
@@ -25,55 +26,43 @@ class HeeksExpertApp(SimApp):
     def GetAppConfigName(self):
         return 'Heeks4Axis'
 
-    def AddExtraRibbonPages(self, ribbon):
-        SimApp.AddExtraRibbonPages(self, ribbon)
+    def AddExtraOtherOperations(self, toolbar):
+        save_bitmap_path = self.bitmap_path
+        self.bitmap_path = this_dir + '/bitmaps'
+        Ribbon.AddToolBarTool(toolbar, 'Unwrap Solid', 'unwrap', 'Unwrap Solid', self.MakeUnwrappedSolid)
+        self.bitmap_path = save_bitmap_path
         
-        page = RB.RibbonPage(ribbon, wx.ID_ANY, 'Test', ribbon.Image('cone'))
-        panel = RB.RibbonPanel(page, wx.ID_ANY, 'Test', ribbon.Image('cone'))
-        toolbar = RB.RibbonButtonBar(panel)
-        Ribbon.AddToolBarTool(toolbar, 'Test1', 'cone', 'Test Area Functions', self.TestAreaFunctions)
-        Ribbon.AddToolBarTool(toolbar, 'Test2', 'cone', 'Test Area Functions 2', self.TestAreaFunctions2)
- 
-        page.Realize()
-        
-    def TestAreaFunctions(self, e):
-        # make a sphere
-        object = step.NewSphere()
-        
-        # make a shadow of the sphere
-        geom.set_accuracy(0.01)
-        stl = object.GetTris(0.01)
-        mat = geom.Matrix()
-        shadow = stl.Shadow(mat, False)
-        s2 = geom.Area(shadow)
-        
-        # time testing 100 union operations
-        start_time = time.time()
-        
-        mat.Translate(geom.Point3D(1,0,0))
-        for i in range(0,100):
-            s2.Transform(mat)
-            shadow.Union(s2)
-            
-        time_taken = time.time() - start_time
-
-        sketch = cad.NewSketchFromArea(shadow)
-        cad.AddUndoably(sketch)
-        
-        wx.MessageBox('time take for 100 unions = %.2f seconds' % time_taken)
-
-    def print_time(self, msg):
-        new_time = time.time()
-        print(msg + ' - %.2f seconds' % (new_time - self.prev_time))
-        self.prev_time = new_time
+    def MakeUnwrappedSolid(self, e):
+        solids = []
+        for object in cad.GetSelectedObjects():
+            if object.GetIDGroupType() == cad.OBJECT_TYPE_STL_SOLID:
+                solids.append(object)
                 
-    def TestAreaFunctions2(self, e):
-        self.start_time = time.time()
-        self.prev_time = self.start_time
-        self.part_stl = geom.Stl('c:/tmp/shadow.stl')
-        self.print_time('part loaded')
-        machining_areas = self.part_stl.GetMachiningAreas()
-        self.print_time('GetMachiningAreas()')
+        print(str(solids))
+        if len(solids) == 0:
+            cad.ClearSelection(True)
+            filter = cad.Filter()
+            filter.AddType(cad.OBJECT_TYPE_STL_SOLID)
+            if wx.GetApp().IsSolidApp():
+                import step
+                filter.AddType(step.GetSolidType())
+            wx.GetApp().PickObjects('Pick solids to unwrap', filter, False)
+        
+            for object in cad.GetSelectedObjects():
+                if object.GetIDGroupType() == cad.OBJECT_TYPE_STL_SOLID:
+                    solids.append(object)
+                    
+        if len(solids) > 0:
+            cad.StartHistory('Unwrap Solids')
+            
+            for object in solids:
+                stl = object.GetTris(0.01)
+                unwrapped_stl = stl.Unwrap(10.0)
+                new_object = cad.NewStlSolidFromStl(unwrapped_stl)
+                print('new_object = ' + str(new_object))
+                cad.AddUndoably(new_object)
+                
+            cad.EndHistory()
 
 app = HeeksExpertApp()
 app.MainLoop()
