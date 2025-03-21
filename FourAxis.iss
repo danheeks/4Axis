@@ -28,46 +28,46 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Dev\4Axis\Run.bat"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\FourAxis.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\FourAxisApp.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\FourAxisDlg.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\Run.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\Splash.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\Splash.png"; DestDir: "{app}\FourAxis"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\bitmaps\*.png"; DestDir: "{app}\FourAxis\bitmaps"; Flags: ignoreversion
-Source: "C:\Dev\4Axis\add to nc\*.*"; DestDir: "{app}\PyCAM\nc"; Flags: ignoreversion
+Source: "C:\Dev\4Axis\Run.bat"; DestDir: "{app}\FourAxis"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\4Axis\FourAxis.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\4Axis\FourAxisApp.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\4Axis\FourAxisDlg.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\4Axis\Run.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\4Axis\Splash.py"; DestDir: "{app}\FourAxis"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\4Axis\Splash.png"; DestDir: "{app}\FourAxis"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\4Axis\bitmaps\*.png"; DestDir: "{app}\FourAxis\bitmaps"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\4Axis\add to nc\*.*"; DestDir: "{app}\PyCAM\nc"; Flags: ignoreversion; Permissions: users-modify
 
 Source: "C:\Dev\dsim\sim.pyd"; DestDir: "{app}\dsim"; Flags: ignoreversion
-Source: "C:\Dev\dsim\SimApp.py"; DestDir: "{app}\dsim"; Flags: ignoreversion
-Source: "C:\Dev\dsim\Toolpath.py"; DestDir: "{app}\dsim"; Flags: ignoreversion
-Source: "C:\Dev\dsim\bitmaps\*.png"; DestDir: "{app}\dsim\bitmaps"; Flags: ignoreversion
+Source: "C:\Dev\dsim\SimApp.py"; DestDir: "{app}\dsim"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\dsim\Toolpath.py"; DestDir: "{app}\dsim"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\dsim\bitmaps\*.png"; DestDir: "{app}\dsim\bitmaps"; Flags: ignoreversion; Permissions: users-modify
 
-Source: "C:\Dev\PyCAD\*.py"; DestDir: "{app}\PyCAD"; Flags: ignoreversion
+Source: "C:\Dev\PyCAD\*.py"; DestDir: "{app}\PyCAD"; Flags: ignoreversion; Permissions: users-modify
 Source: "C:\Dev\PyCAD\*.pyd"; DestDir: "{app}\PyCAD"; Flags: ignoreversion
 Source: "C:\Dev\PyCAD\*.dll"; DestDir: "{app}\PyCAD"; Flags: ignoreversion
-Source: "C:\Dev\PyCAD\*.png"; DestDir: "{app}\PyCAD"; Flags: ignoreversion
-Source: "C:\Dev\PyCAD\bitmaps\*.png"; DestDir: "{app}\PyCAD\bitmaps"; Flags: ignoreversion
-Source: "C:\Dev\PyCAD\bitmaps\angle\*.png"; DestDir: "{app}\PyCAD\bitmaps\angle"; Flags: ignoreversion
-Source: "C:\Dev\PyCAD\bitmaps\mirror\*.png"; DestDir: "{app}\PyCAD\bitmaps\mirror"; Flags: ignoreversion
-Source: "C:\Dev\PyCAD\icons\*.png"; DestDir: "{app}\PyCAD\icons"; Flags: ignoreversion
+Source: "C:\Dev\PyCAD\*.png"; DestDir: "{app}\PyCAD"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAD\bitmaps\*.png"; DestDir: "{app}\PyCAD\bitmaps"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAD\bitmaps\angle\*.png"; DestDir: "{app}\PyCAD\bitmaps\angle"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAD\bitmaps\mirror\*.png"; DestDir: "{app}\PyCAD\bitmaps\mirror"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAD\icons\*.png"; DestDir: "{app}\PyCAD\icons"; Flags: ignoreversion; Permissions: users-modify
 
-Source: "C:\Dev\PyCAM\*.py"; DestDir: "{app}\PyCAM"; Flags: ignoreversion
+Source: "C:\Dev\PyCAM\*.py"; DestDir: "{app}\PyCAM"; Flags: ignoreversion; Permissions: users-modify
 Source: "C:\Dev\PyCAM\*.pyd"; DestDir: "{app}\PyCAM"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\*.png"; DestDir: "{app}\PyCAM"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\default.tooltable"; DestDir: "{app}\PyCAM"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\bitmaps\*.png"; DestDir: "{app}\PyCAM\bitmaps"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\bitmaps\depthop\*.png"; DestDir: "{app}\PyCAM\bitmaps\depthop"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\bitmaps\drilling\*.png"; DestDir: "{app}\PyCAM\bitmaps\drilling"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\bitmaps\pattern\*.png"; DestDir: "{app}\PyCAM\bitmaps\pattern"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\bitmaps\pocket\*.png"; DestDir: "{app}\PyCAM\bitmaps\pocket"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\bitmaps\profile\*.png"; DestDir: "{app}\PyCAM\bitmaps\profile"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\bitmaps\stock\*.png"; DestDir: "{app}\PyCAM\bitmaps\stock"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\bitmaps\surface\*.png"; DestDir: "{app}\PyCAM\bitmaps\surface"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\bitmaps\tool\*.png"; DestDir: "{app}\PyCAM\bitmaps\tool"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\icons\*.png"; DestDir: "{app}\PyCAM\icons"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\nc\*.py"; DestDir: "{app}\PyCAM\nc"; Flags: ignoreversion
-Source: "C:\Dev\PyCAM\nc\machines.xml"; DestDir: "{app}\PyCAM\nc"; Flags: ignoreversion
+Source: "C:\Dev\PyCAM\*.png"; DestDir: "{app}\PyCAM"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\default.tooltable"; DestDir: "{app}\PyCAM"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\bitmaps\*.png"; DestDir: "{app}\PyCAM\bitmaps"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\bitmaps\depthop\*.png"; DestDir: "{app}\PyCAM\bitmaps\depthop"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\bitmaps\drilling\*.png"; DestDir: "{app}\PyCAM\bitmaps\drilling"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\bitmaps\pattern\*.png"; DestDir: "{app}\PyCAM\bitmaps\pattern"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\bitmaps\pocket\*.png"; DestDir: "{app}\PyCAM\bitmaps\pocket"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\bitmaps\profile\*.png"; DestDir: "{app}\PyCAM\bitmaps\profile"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\bitmaps\stock\*.png"; DestDir: "{app}\PyCAM\bitmaps\stock"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\bitmaps\surface\*.png"; DestDir: "{app}\PyCAM\bitmaps\surface"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\bitmaps\tool\*.png"; DestDir: "{app}\PyCAM\bitmaps\tool"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\icons\*.png"; DestDir: "{app}\PyCAM\icons"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\nc\*.py"; DestDir: "{app}\PyCAM\nc"; Flags: ignoreversion; Permissions: users-modify
+Source: "C:\Dev\PyCAM\nc\machines.xml"; DestDir: "{app}\PyCAM\nc"; Flags: ignoreversion; Permissions: users-modify
 
 Source: "C:\Users\Admin\Downloads\Heeks2Dist\python3\*.py"; DestDir: "{app}\python3"; Flags: ignoreversion recursesubdirs
 Source: "C:\Users\Admin\Downloads\Heeks2Dist\python3\*.dll"; DestDir: "{app}\python3"; Flags: ignoreversion recursesubdirs

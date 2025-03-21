@@ -1,2 +1,2 @@
 #define MyAppName "Four Axis Heeks"
-#define MyVersion "0.3"
+#define MyVersion "0.4"
