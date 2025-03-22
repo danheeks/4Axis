@@ -31,9 +31,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.2188716"
-     inkscape:cx="270.21443"
-     inkscape:cy="194.83883"
+     inkscape:zoom="8.4377432"
+     inkscape:cx="259.42956"
+     inkscape:cy="196.14249"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -10433,6 +10433,34 @@
          d="m 331.65641,174.90468 c 16.39502,1.40289 17.03973,10.8173 16.30248,15.44279 l 7.01345,-0.68773 -8.50073,11.79636 -9.13383,-10.01052 5.78442,-0.71988 c 0.62512,-5.92247 -0.86757,-10.08848 -12.81156,-11.87766 z"
          id="path3406"
          sodipodi:nodetypes="cccccccc" />
+    </g>
+    <g
+       id="g1983"
+       inkscape:export-filename="split.png"
+       inkscape:export-xdpi="224.78049"
+       inkscape:export-ydpi="224.78049">
+      <circle
+         style="fill:#00ff00;stroke:#000000;stroke-linecap:round;stroke-linejoin:round"
+         id="path1914"
+         cx="260"
+         cy="190"
+         r="20" />
+      <path
+         style="fill:#00ff00;stroke:#000000;stroke-linecap:round;stroke-linejoin:round"
+         d="m 246.21513,204.61632 32.2361,-22.93267 -38.33963,8.82938 25.36223,-19.43648 -5.92576,15.11068 z"
+         id="path1970" />
+      <path
+         style="fill:#00ff00;stroke:#000000;stroke-linecap:round;stroke-linejoin:round"
+         d="m 271.28107,206.51257 -7.94051,-13.51073 -6.2813,16.71063"
+         id="path1972" />
+      <path
+         style="fill:#00ff00;stroke:#000000;stroke-linecap:round;stroke-linejoin:round"
+         d="m 279.69564,194.187 -16.59211,-1.48144"
+         id="path1974" />
+      <path
+         style="fill:#00ff00;stroke:#000000;stroke-linecap:round;stroke-linejoin:round"
+         d="m 253.91861,179.90593 -4.91838,-6.34056"
+         id="path1976" />
     </g>
   </g>
 </svg>
